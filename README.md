@@ -44,7 +44,7 @@ cd ~/domains/$USER.serv00.net/vless && ./check_vless.sh
 ```
 pm2 logs
 ```
-## serv00-script
+## 守护
 
 ## 恢复 vless 服务并发送 Telegram 通知
 
