@@ -2,7 +2,7 @@
 ### 拉取代码到指定目录
 
 ```
-cd ~/domains && git clone https://github.com/yixiu001/serv00-script.git && cd serv00-script && bash vless.sh
+cd ~/domains && git clone https://github.com/xrw002/serv00-script.git && cd serv00-script && bash vless.sh
 ```
 
 ### 执行命令
