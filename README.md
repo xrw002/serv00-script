@@ -1,4 +1,50 @@
-# serv00-script
+#安装以及守护
+###拉取代码到指定目录
+
+```
+cd ~/domains && git clone https://github.com/yixiu001/serv00-script.git && cd serv00-script && bash vless.sh
+```
+
+###执行命令
+
+```
+cd ~/domains/$USER.serv00.net/vless && ./check_vless.sh -p <端口号>
+```
+
+###复制信息中返回的vless信息并粘贴到v2ray中使用
+配置定时任务维护节点
+在面板中依次打开Cron jobs->Add cron job->Specify time选择每小时执行一次Hourly->Command中输入以下命令
+
+```
+cd ~/domains/$USER.serv00.net/vless && ./check_vless.sh
+```
+
+###其他常用命令
+删除vless节点代码以及进程关闭
+
+```
+pm2 delete vless && rm -rf ~/domains/serv00-script && rm -rf ~/domains/$USER.serv00.net/vless
+```
+
+查看当前vless节点状态
+
+```
+pm2 status
+```
+
+##如果状态异常可以执行以下命令重启
+
+```
+cd ~/domains/$USER.serv00.net/vless && ./check_vless.sh
+```
+
+3，查看错误日志
+如果出现异常可以执行以下命令查看日志截图发到TG群聊解决
+
+```
+pm2 logs
+```
+## serv00-script
 
 ## 恢复 vless 服务并发送 Telegram 通知
 
